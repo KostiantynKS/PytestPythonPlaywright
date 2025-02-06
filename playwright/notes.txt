@@ -1,0 +1,4 @@
+from the terminal type:     playwright codegen      and then the base url of the application that we are testing
+
+it will opn two browsers. In one we are manually doing steps that we want, in another will be an automatically
+generated code with all the steps that were taken. I will not be ideal, but it provides the blueprint that can be improved

@@ -1,0 +1,29 @@
+To be able to run all files using Pytest the name of the files should start with test_
+To run all of them we should use Terminal
+just type the command pytest
+
+If we want to see the print statements during the run we should use the command pytest -s
+To run one separate file from the terminal we can type:  pytest and then the name of the specific file we wanna run
+Example: pytest test_2PyTestValidation.py
+
+To run from terminal the only one specific function we have to provide the function name in addition to file name
+Example: pytest test_2PyTestValidation.py::test_thirdCheck
+
+We can also tag tests in pytest into groops (like Smoke test) with syntax @pytest.mark.smoke
+Example: put the tag @pytest.mark.smoke for the tests  and then use the command pytest -m smoke - in this case all sest with tag smoke will run
+
+@pytest.mark.skip will skip this test from running
+
+Fixture (precondition) linckage should be provided as an argument in the test
+
+Fixtures are able to return value
+Value from the fixtures can be checked by assertions with the word assert
+Example:  assert preWork == "pass"
+
+We can chain different preconditions (fixtures)
+Example:  def test_initialCheck(preWork, secondWork):
+
+yield   this statement in fixture will separate what to execute before test and after
+Basically the code will execute the precondition up to the yield
+And then return to the remaining part after the test is done. Just like @AfterTest
+
