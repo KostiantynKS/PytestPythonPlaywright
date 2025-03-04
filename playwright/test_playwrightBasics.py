@@ -20,12 +20,13 @@ def test_coreLocators(page:Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     page.get_by_label("Username").fill("rahulshettyacademy")
     page.get_by_label("Password").fill("learning")
+    # time.sleep(25)
     # should be unique
     page.get_by_role("combobox").select_option("teach")
     page.locator( "#terms").check()
     page.get_by_role("link", name="terms and conditions").click()
     page.get_by_role("button", name="Sign in").click()
-    time.sleep(5)  # Similarly to Thread.sleep telling code to wait so we can see the result
+    time.sleep(15)  # Similarly to Thread.sleep telling code to wait so we can see the result
 
 def test_coreLocators(page: Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
